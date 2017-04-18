@@ -1,7 +1,10 @@
-# test coverage for  [sanitize-html (v1.14.1)](https://github.com/punkave/sanitize-html#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-sanitize-html.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-sanitize-html) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-sanitize-html.svg)](https://travis-ci.org/npmtest/node-npmtest-sanitize-html)
+# npmtest-sanitize-html
+
+#### test coverage for  [sanitize-html (v1.14.1)](https://github.com/punkave/sanitize-html#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-sanitize-html.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-sanitize-html) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-sanitize-html.svg)](https://travis-ci.org/npmtest/node-npmtest-sanitize-html)
+
 #### Clean up user-submitted HTML, preserving whitelisted elements and whitelisted attributes on a per-element basis
 
-[![NPM](https://nodei.co/npm/sanitize-html.png?downloads=true)](https://www.npmjs.com/package/sanitize-html)
+[![NPM](https://nodei.co/npm/sanitize-html.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/sanitize-html)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-sanitize-html/tree/alpha)|
 |--:|:--|
@@ -9,11 +12,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-sanitize-html/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-sanitize-html/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-sanitize-html/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-sanitize-html/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-sanitize-html/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-sanitize-html/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-sanitize-html/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-sanitize-html/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-sanitize-html/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-sanitize-html%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-sanitize-html/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-sanitize-html/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-sanitize-html/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-sanitize-html/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-sanitize-html%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-sanitize-html/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-sanitize-html/build/test-report.html](https://npmtest.github.io/node-npmtest-sanitize-html/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-sanitize-html/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-sanitize-html/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-sanitize-html/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-sanitize-html/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-sanitize-html/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-sanitize-html/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-sanitize-html/build/screenCapture.npmPackageListing.svg)
 
@@ -62,45 +71,35 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "alexgilbert",
-            "email": "alex@punkave.com"
+            "name": "alexgilbert"
         },
         {
-            "name": "austinstarin",
-            "email": "austin@punkave.com"
+            "name": "austinstarin"
         },
         {
-            "name": "boutell",
-            "email": "boutell@boutell.com"
+            "name": "boutell"
         },
         {
-            "name": "colpanik",
-            "email": "kerry@punkave.com"
+            "name": "colpanik"
         },
         {
-            "name": "grdunn",
-            "email": "grdunn@gmail.com"
+            "name": "grdunn"
         },
         {
-            "name": "jimmyh",
-            "email": "jimmy@punkave.com"
+            "name": "jimmyh"
         },
         {
-            "name": "kyjoya",
-            "email": "kyleejacker@gmail.com"
+            "name": "kyjoya"
         },
         {
-            "name": "mcoppola",
-            "email": "coppola@punkave.com"
+            "name": "mcoppola"
         },
         {
-            "name": "stuartromanek",
-            "email": "stuart@punkave.com"
+            "name": "stuartromanek"
         }
     ],
     "name": "sanitize-html",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/punkave/sanitize-html.git"
