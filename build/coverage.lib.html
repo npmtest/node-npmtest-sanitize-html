@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-sanitize-html/sanitize-html/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-sanitize-html/node_modules/sanitize-html/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-sanitize-html">npmtest-sanitize-html (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-sanitize-html/sanitize-html/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-sanitize-html/node_modules/sanitize-html/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">7.07% <small>(14 / 198)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-sanitize-html/sanitize-html/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-sanitize-html/node_modules/sanitize-html/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -960,15 +962,15 @@
 var extend = require('xtend');
 var quoteRegexp = require('regexp-quote');
 &nbsp;
-<span class="fstat-no" title="function not covered">function each(obj, cb) {</span>
-<span class="cstat-no" title="statement not covered">  if (obj) <span class="cstat-no" title="statement not covered">Object.keys(obj).forEach(<span class="fstat-no" title="function not covered">function (key) {</span></span></span>
-<span class="cstat-no" title="statement not covered">    cb(obj[key], key);</span>
+<span class="fstat-no" title="function not covered" >function each(obj, cb) {</span>
+<span class="cstat-no" title="statement not covered" >  if (obj) <span class="cstat-no" title="statement not covered" >Object.keys(obj).forEach(<span class="fstat-no" title="function not covered" >function (key) {</span></span></span>
+<span class="cstat-no" title="statement not covered" >    cb(obj[key], key);</span>
   });
 }
 &nbsp;
 // Avoid false positives with .__proto__, .hasOwnProperty, etc.
-<span class="fstat-no" title="function not covered">function has(obj, key) {</span>
-<span class="cstat-no" title="statement not covered">  return ({}).hasOwnProperty.call(obj, key);</span>
+<span class="fstat-no" title="function not covered" >function has(obj, key) {</span>
+<span class="cstat-no" title="statement not covered" >  return ({}).hasOwnProperty.call(obj, key);</span>
 }
 &nbsp;
 module.exports = sanitizeHtml;
@@ -977,33 +979,33 @@ module.exports = sanitizeHtml;
 // invocation as a guard against this exploit:
 // https://github.com/fb55/htmlparser2/issues/105
 &nbsp;
-<span class="fstat-no" title="function not covered">function sanitizeHtml(html, options, _recursing) {</span>
-<span class="cstat-no" title="statement not covered">  var result = '';</span>
+<span class="fstat-no" title="function not covered" >function sanitizeHtml(html, options, _recursing) {</span>
+<span class="cstat-no" title="statement not covered" >  var result = '';</span>
 &nbsp;
-<span class="fstat-no" title="function not covered">  function Frame(tag, attribs) {</span>
-<span class="cstat-no" title="statement not covered">    var that = this;</span>
-<span class="cstat-no" title="statement not covered">    this.tag = tag;</span>
-<span class="cstat-no" title="statement not covered">    this.attribs = attribs || {};</span>
-<span class="cstat-no" title="statement not covered">    this.tagPosition = result.length;</span>
-<span class="cstat-no" title="statement not covered">    this.text = ''; </span>// Node inner text
+<span class="fstat-no" title="function not covered" >  function Frame(tag, attribs) {</span>
+<span class="cstat-no" title="statement not covered" >    var that = this;</span>
+<span class="cstat-no" title="statement not covered" >    this.tag = tag;</span>
+<span class="cstat-no" title="statement not covered" >    this.attribs = attribs || {};</span>
+<span class="cstat-no" title="statement not covered" >    this.tagPosition = result.length;</span>
+<span class="cstat-no" title="statement not covered" >    this.text = ''; </span>// Node inner text
 &nbsp;
-<span class="cstat-no" title="statement not covered">    this.updateParentNodeText = <span class="fstat-no" title="function not covered">function() {</span></span>
-<span class="cstat-no" title="statement not covered">      if (stack.length) {</span>
-<span class="cstat-no" title="statement not covered">          var parentFrame = stack[stack.length - 1];</span>
-<span class="cstat-no" title="statement not covered">          parentFrame.text += that.text;</span>
+<span class="cstat-no" title="statement not covered" >    this.updateParentNodeText = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (stack.length) {</span>
+<span class="cstat-no" title="statement not covered" >          var parentFrame = stack[stack.length - 1];</span>
+<span class="cstat-no" title="statement not covered" >          parentFrame.text += that.text;</span>
       }
     };
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (!options) {</span>
-<span class="cstat-no" title="statement not covered">    options = sanitizeHtml.defaults;</span>
-<span class="cstat-no" title="statement not covered">    options.parser = htmlParserDefaults;</span>
+<span class="cstat-no" title="statement not covered" >  if (!options) {</span>
+<span class="cstat-no" title="statement not covered" >    options = sanitizeHtml.defaults;</span>
+<span class="cstat-no" title="statement not covered" >    options.parser = htmlParserDefaults;</span>
   } else {
-<span class="cstat-no" title="statement not covered">    options = extend(sanitizeHtml.defaults, options);</span>
-<span class="cstat-no" title="statement not covered">    if (options.parser) {</span>
-<span class="cstat-no" title="statement not covered">      options.parser = extend(htmlParserDefaults, options.parser);</span>
+<span class="cstat-no" title="statement not covered" >    options = extend(sanitizeHtml.defaults, options);</span>
+<span class="cstat-no" title="statement not covered" >    if (options.parser) {</span>
+<span class="cstat-no" title="statement not covered" >      options.parser = extend(htmlParserDefaults, options.parser);</span>
     } else {
-<span class="cstat-no" title="statement not covered">      options.parser = htmlParserDefaults;</span>
+<span class="cstat-no" title="statement not covered" >      options.parser = htmlParserDefaults;</span>
     }
   }
 &nbsp;
@@ -1011,274 +1013,274 @@ module.exports = sanitizeHtml;
   // the text when the tag is disallowed makes sense for other reasons.
   // If we are not allowing these tags, we should drop their content too.
   // For other tags you would drop the tag but keep its content.
-<span class="cstat-no" title="statement not covered">  var nonTextTagsArray = options.nonTextTags || [ 'script', 'style', 'textarea' ];</span>
-<span class="cstat-no" title="statement not covered">  var allowedAttributesMap;</span>
-<span class="cstat-no" title="statement not covered">  var allowedAttributesGlobMap;</span>
-<span class="cstat-no" title="statement not covered">  if(options.allowedAttributes) {</span>
-<span class="cstat-no" title="statement not covered">    allowedAttributesMap = {};</span>
-<span class="cstat-no" title="statement not covered">    allowedAttributesGlobMap = {};</span>
-<span class="cstat-no" title="statement not covered">    each(options.allowedAttributes, <span class="fstat-no" title="function not covered">function(attributes, tag) {</span></span>
-<span class="cstat-no" title="statement not covered">      allowedAttributesMap[tag] = [];</span>
-<span class="cstat-no" title="statement not covered">      var globRegex = [];</span>
-<span class="cstat-no" title="statement not covered">      attributes.forEach(<span class="fstat-no" title="function not covered">function(name) {</span></span>
-<span class="cstat-no" title="statement not covered">        if(name.indexOf('*') &gt;= 0) {</span>
-<span class="cstat-no" title="statement not covered">          globRegex.push(quoteRegexp(name).replace(/\\\*/g, '.*'));</span>
+<span class="cstat-no" title="statement not covered" >  var nonTextTagsArray = options.nonTextTags || [ 'script', 'style', 'textarea' ];</span>
+<span class="cstat-no" title="statement not covered" >  var allowedAttributesMap;</span>
+<span class="cstat-no" title="statement not covered" >  var allowedAttributesGlobMap;</span>
+<span class="cstat-no" title="statement not covered" >  if(options.allowedAttributes) {</span>
+<span class="cstat-no" title="statement not covered" >    allowedAttributesMap = {};</span>
+<span class="cstat-no" title="statement not covered" >    allowedAttributesGlobMap = {};</span>
+<span class="cstat-no" title="statement not covered" >    each(options.allowedAttributes, <span class="fstat-no" title="function not covered" >function(attributes, tag) {</span></span>
+<span class="cstat-no" title="statement not covered" >      allowedAttributesMap[tag] = [];</span>
+<span class="cstat-no" title="statement not covered" >      var globRegex = [];</span>
+<span class="cstat-no" title="statement not covered" >      attributes.forEach(<span class="fstat-no" title="function not covered" >function(name) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if(name.indexOf('*') &gt;= 0) {</span>
+<span class="cstat-no" title="statement not covered" >          globRegex.push(quoteRegexp(name).replace(/\\\*/g, '.*'));</span>
         } else {
-<span class="cstat-no" title="statement not covered">          allowedAttributesMap[tag].push(name);</span>
+<span class="cstat-no" title="statement not covered" >          allowedAttributesMap[tag].push(name);</span>
         }
       });
-<span class="cstat-no" title="statement not covered">      allowedAttributesGlobMap[tag] = new RegExp('^(' + globRegex.join('|') + ')$');</span>
+<span class="cstat-no" title="statement not covered" >      allowedAttributesGlobMap[tag] = new RegExp('^(' + globRegex.join('|') + ')$');</span>
     });
   }
-<span class="cstat-no" title="statement not covered">  var allowedClassesMap = {};</span>
-<span class="cstat-no" title="statement not covered">  each(options.allowedClasses, <span class="fstat-no" title="function not covered">function(classes, tag) {</span></span>
+<span class="cstat-no" title="statement not covered" >  var allowedClassesMap = {};</span>
+<span class="cstat-no" title="statement not covered" >  each(options.allowedClasses, <span class="fstat-no" title="function not covered" >function(classes, tag) {</span></span>
     // Implicitly allows the class attribute
-<span class="cstat-no" title="statement not covered">    if(allowedAttributesMap) {</span>
-<span class="cstat-no" title="statement not covered">      if (!has(allowedAttributesMap, tag)) {</span>
-<span class="cstat-no" title="statement not covered">        allowedAttributesMap[tag] = [];</span>
+<span class="cstat-no" title="statement not covered" >    if(allowedAttributesMap) {</span>
+<span class="cstat-no" title="statement not covered" >      if (!has(allowedAttributesMap, tag)) {</span>
+<span class="cstat-no" title="statement not covered" >        allowedAttributesMap[tag] = [];</span>
       }
-<span class="cstat-no" title="statement not covered">      allowedAttributesMap[tag].push('class');</span>
+<span class="cstat-no" title="statement not covered" >      allowedAttributesMap[tag].push('class');</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    allowedClassesMap[tag] = classes;</span>
+<span class="cstat-no" title="statement not covered" >    allowedClassesMap[tag] = classes;</span>
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var transformTagsMap = {};</span>
-<span class="cstat-no" title="statement not covered">  var transformTagsAll;</span>
-<span class="cstat-no" title="statement not covered">  each(options.transformTags, <span class="fstat-no" title="function not covered">function(transform, tag) {</span></span>
-<span class="cstat-no" title="statement not covered">    var transFun;</span>
-<span class="cstat-no" title="statement not covered">    if (typeof transform === 'function') {</span>
-<span class="cstat-no" title="statement not covered">      transFun = transform;</span>
-    } else <span class="cstat-no" title="statement not covered">if (typeof transform === "string") {</span>
-<span class="cstat-no" title="statement not covered">      transFun = sanitizeHtml.simpleTransform(transform);</span>
+<span class="cstat-no" title="statement not covered" >  var transformTagsMap = {};</span>
+<span class="cstat-no" title="statement not covered" >  var transformTagsAll;</span>
+<span class="cstat-no" title="statement not covered" >  each(options.transformTags, <span class="fstat-no" title="function not covered" >function(transform, tag) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var transFun;</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof transform === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >      transFun = transform;</span>
+    } else <span class="cstat-no" title="statement not covered" >if (typeof transform === "string") {</span>
+<span class="cstat-no" title="statement not covered" >      transFun = sanitizeHtml.simpleTransform(transform);</span>
     }
-<span class="cstat-no" title="statement not covered">    if (tag === '*') {</span>
-<span class="cstat-no" title="statement not covered">      transformTagsAll = transFun;</span>
+<span class="cstat-no" title="statement not covered" >    if (tag === '*') {</span>
+<span class="cstat-no" title="statement not covered" >      transformTagsAll = transFun;</span>
     } else {
-<span class="cstat-no" title="statement not covered">      transformTagsMap[tag] = transFun;</span>
+<span class="cstat-no" title="statement not covered" >      transformTagsMap[tag] = transFun;</span>
     }
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var depth = 0;</span>
-<span class="cstat-no" title="statement not covered">  var stack = [];</span>
-<span class="cstat-no" title="statement not covered">  var skipMap = {};</span>
-<span class="cstat-no" title="statement not covered">  var transformMap = {};</span>
-<span class="cstat-no" title="statement not covered">  var skipText = false;</span>
-<span class="cstat-no" title="statement not covered">  var skipTextDepth = 0;</span>
+<span class="cstat-no" title="statement not covered" >  var depth = 0;</span>
+<span class="cstat-no" title="statement not covered" >  var stack = [];</span>
+<span class="cstat-no" title="statement not covered" >  var skipMap = {};</span>
+<span class="cstat-no" title="statement not covered" >  var transformMap = {};</span>
+<span class="cstat-no" title="statement not covered" >  var skipText = false;</span>
+<span class="cstat-no" title="statement not covered" >  var skipTextDepth = 0;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var parser = new htmlparser.Parser({</span>
-    onopentag: <span class="fstat-no" title="function not covered">function(name, attribs) {</span>
-<span class="cstat-no" title="statement not covered">      if (skipText) {</span>
-<span class="cstat-no" title="statement not covered">        skipTextDepth++;</span>
-<span class="cstat-no" title="statement not covered">        return;</span>
+<span class="cstat-no" title="statement not covered" >  var parser = new htmlparser.Parser({</span>
+    onopentag: <span class="fstat-no" title="function not covered" >function(name, attribs) {</span>
+<span class="cstat-no" title="statement not covered" >      if (skipText) {</span>
+<span class="cstat-no" title="statement not covered" >        skipTextDepth++;</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
       }
-<span class="cstat-no" title="statement not covered">      var frame = new Frame(name, attribs);</span>
-<span class="cstat-no" title="statement not covered">      stack.push(frame);</span>
+<span class="cstat-no" title="statement not covered" >      var frame = new Frame(name, attribs);</span>
+<span class="cstat-no" title="statement not covered" >      stack.push(frame);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      var skip = false;</span>
-<span class="cstat-no" title="statement not covered">      var hasText = frame.text ? true : false;</span>
-<span class="cstat-no" title="statement not covered">      var transformedTag;</span>
-<span class="cstat-no" title="statement not covered">      if (has(transformTagsMap, name)) {</span>
-<span class="cstat-no" title="statement not covered">        transformedTag = transformTagsMap[name](name, attribs);</span>
+<span class="cstat-no" title="statement not covered" >      var skip = false;</span>
+<span class="cstat-no" title="statement not covered" >      var hasText = frame.text ? true : false;</span>
+<span class="cstat-no" title="statement not covered" >      var transformedTag;</span>
+<span class="cstat-no" title="statement not covered" >      if (has(transformTagsMap, name)) {</span>
+<span class="cstat-no" title="statement not covered" >        transformedTag = transformTagsMap[name](name, attribs);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        frame.attribs = attribs = transformedTag.attribs;</span>
+<span class="cstat-no" title="statement not covered" >        frame.attribs = attribs = transformedTag.attribs;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        if (transformedTag.text !== undefined) {</span>
-<span class="cstat-no" title="statement not covered">          frame.innerText = transformedTag.text;</span>
+<span class="cstat-no" title="statement not covered" >        if (transformedTag.text !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >          frame.innerText = transformedTag.text;</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered">        if (name !== transformedTag.tagName) {</span>
-<span class="cstat-no" title="statement not covered">          frame.name = name = transformedTag.tagName;</span>
-<span class="cstat-no" title="statement not covered">          transformMap[depth] = transformedTag.tagName;</span>
+<span class="cstat-no" title="statement not covered" >        if (name !== transformedTag.tagName) {</span>
+<span class="cstat-no" title="statement not covered" >          frame.name = name = transformedTag.tagName;</span>
+<span class="cstat-no" title="statement not covered" >          transformMap[depth] = transformedTag.tagName;</span>
         }
       }
-<span class="cstat-no" title="statement not covered">      if (transformTagsAll) {</span>
-<span class="cstat-no" title="statement not covered">        transformedTag = transformTagsAll(name, attribs);</span>
+<span class="cstat-no" title="statement not covered" >      if (transformTagsAll) {</span>
+<span class="cstat-no" title="statement not covered" >        transformedTag = transformTagsAll(name, attribs);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        frame.attribs = attribs = transformedTag.attribs;</span>
-<span class="cstat-no" title="statement not covered">        if (name !== transformedTag.tagName) {</span>
-<span class="cstat-no" title="statement not covered">          frame.name = name = transformedTag.tagName;</span>
-<span class="cstat-no" title="statement not covered">          transformMap[depth] = transformedTag.tagName;</span>
+<span class="cstat-no" title="statement not covered" >        frame.attribs = attribs = transformedTag.attribs;</span>
+<span class="cstat-no" title="statement not covered" >        if (name !== transformedTag.tagName) {</span>
+<span class="cstat-no" title="statement not covered" >          frame.name = name = transformedTag.tagName;</span>
+<span class="cstat-no" title="statement not covered" >          transformMap[depth] = transformedTag.tagName;</span>
         }
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      if (options.allowedTags &amp;&amp; options.allowedTags.indexOf(name) === -1) {</span>
-<span class="cstat-no" title="statement not covered">        skip = true;</span>
-<span class="cstat-no" title="statement not covered">        if (nonTextTagsArray.indexOf(name) !== -1) {</span>
-<span class="cstat-no" title="statement not covered">          skipText = true;</span>
-<span class="cstat-no" title="statement not covered">          skipTextDepth = 1;</span>
+<span class="cstat-no" title="statement not covered" >      if (options.allowedTags &amp;&amp; options.allowedTags.indexOf(name) === -1) {</span>
+<span class="cstat-no" title="statement not covered" >        skip = true;</span>
+<span class="cstat-no" title="statement not covered" >        if (nonTextTagsArray.indexOf(name) !== -1) {</span>
+<span class="cstat-no" title="statement not covered" >          skipText = true;</span>
+<span class="cstat-no" title="statement not covered" >          skipTextDepth = 1;</span>
         }
-<span class="cstat-no" title="statement not covered">        skipMap[depth] = true;</span>
+<span class="cstat-no" title="statement not covered" >        skipMap[depth] = true;</span>
       }
-<span class="cstat-no" title="statement not covered">      depth++;</span>
-<span class="cstat-no" title="statement not covered">      if (skip) {</span>
+<span class="cstat-no" title="statement not covered" >      depth++;</span>
+<span class="cstat-no" title="statement not covered" >      if (skip) {</span>
         // We want the contents but not this tag
-<span class="cstat-no" title="statement not covered">        return;</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
       }
-<span class="cstat-no" title="statement not covered">      result += '&lt;' + name;</span>
-<span class="cstat-no" title="statement not covered">      if (!allowedAttributesMap || has(allowedAttributesMap, name) || allowedAttributesMap['*']) {</span>
-<span class="cstat-no" title="statement not covered">        each(attribs, <span class="fstat-no" title="function not covered">function(value, a) {</span></span>
-<span class="cstat-no" title="statement not covered">          if (!allowedAttributesMap ||</span>
+<span class="cstat-no" title="statement not covered" >      result += '&lt;' + name;</span>
+<span class="cstat-no" title="statement not covered" >      if (!allowedAttributesMap || has(allowedAttributesMap, name) || allowedAttributesMap['*']) {</span>
+<span class="cstat-no" title="statement not covered" >        each(attribs, <span class="fstat-no" title="function not covered" >function(value, a) {</span></span>
+<span class="cstat-no" title="statement not covered" >          if (!allowedAttributesMap ||</span>
               (has(allowedAttributesMap, name) &amp;&amp; allowedAttributesMap[name].indexOf(a) !== -1 ) ||
               (allowedAttributesMap['*'] &amp;&amp; allowedAttributesMap['*'].indexOf(a) !== -1 ) ||
               (has(allowedAttributesGlobMap, name) &amp;&amp; allowedAttributesGlobMap[name].test(a)) ||
               (allowedAttributesGlobMap['*'] &amp;&amp; allowedAttributesGlobMap['*'].test(a))) {
-<span class="cstat-no" title="statement not covered">            if ((a === 'href') || (a === 'src')) {</span>
-<span class="cstat-no" title="statement not covered">              if (naughtyHref(name, value)) {</span>
-<span class="cstat-no" title="statement not covered">                delete frame.attribs[a];</span>
-<span class="cstat-no" title="statement not covered">                return;</span>
+<span class="cstat-no" title="statement not covered" >            if ((a === 'href') || (a === 'src')) {</span>
+<span class="cstat-no" title="statement not covered" >              if (naughtyHref(name, value)) {</span>
+<span class="cstat-no" title="statement not covered" >                delete frame.attribs[a];</span>
+<span class="cstat-no" title="statement not covered" >                return;</span>
               }
             }
-<span class="cstat-no" title="statement not covered">            if (a === 'class') {</span>
-<span class="cstat-no" title="statement not covered">              value = filterClasses(value, allowedClassesMap[name]);</span>
-<span class="cstat-no" title="statement not covered">              if (!value.length) {</span>
-<span class="cstat-no" title="statement not covered">                delete frame.attribs[a];</span>
-<span class="cstat-no" title="statement not covered">                return;</span>
+<span class="cstat-no" title="statement not covered" >            if (a === 'class') {</span>
+<span class="cstat-no" title="statement not covered" >              value = filterClasses(value, allowedClassesMap[name]);</span>
+<span class="cstat-no" title="statement not covered" >              if (!value.length) {</span>
+<span class="cstat-no" title="statement not covered" >                delete frame.attribs[a];</span>
+<span class="cstat-no" title="statement not covered" >                return;</span>
               }
             }
-<span class="cstat-no" title="statement not covered">            result += ' ' + a;</span>
-<span class="cstat-no" title="statement not covered">            if (value.length) {</span>
-<span class="cstat-no" title="statement not covered">              result += '="' + escapeHtml(value) + '"';</span>
+<span class="cstat-no" title="statement not covered" >            result += ' ' + a;</span>
+<span class="cstat-no" title="statement not covered" >            if (value.length) {</span>
+<span class="cstat-no" title="statement not covered" >              result += '="' + escapeHtml(value) + '"';</span>
             }
           } else {
-<span class="cstat-no" title="statement not covered">            delete frame.attribs[a];</span>
+<span class="cstat-no" title="statement not covered" >            delete frame.attribs[a];</span>
           }
         });
       }
-<span class="cstat-no" title="statement not covered">      if (options.selfClosing.indexOf(name) !== -1) {</span>
-<span class="cstat-no" title="statement not covered">        result += " /&gt;";</span>
+<span class="cstat-no" title="statement not covered" >      if (options.selfClosing.indexOf(name) !== -1) {</span>
+<span class="cstat-no" title="statement not covered" >        result += " /&gt;";</span>
       } else {
-<span class="cstat-no" title="statement not covered">        result += "&gt;";</span>
-<span class="cstat-no" title="statement not covered">        if (frame.innerText &amp;&amp; !hasText &amp;&amp; !options.textFilter) {</span>
-<span class="cstat-no" title="statement not covered">          result += frame.innerText;</span>
+<span class="cstat-no" title="statement not covered" >        result += "&gt;";</span>
+<span class="cstat-no" title="statement not covered" >        if (frame.innerText &amp;&amp; !hasText &amp;&amp; !options.textFilter) {</span>
+<span class="cstat-no" title="statement not covered" >          result += frame.innerText;</span>
         }
       }
     },
-    ontext: <span class="fstat-no" title="function not covered">function(text) {</span>
-<span class="cstat-no" title="statement not covered">      if (skipText) {</span>
-<span class="cstat-no" title="statement not covered">        return;</span>
+    ontext: <span class="fstat-no" title="function not covered" >function(text) {</span>
+<span class="cstat-no" title="statement not covered" >      if (skipText) {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
       }
-<span class="cstat-no" title="statement not covered">      var lastFrame = stack[stack.length-1];</span>
-<span class="cstat-no" title="statement not covered">      var tag;</span>
+<span class="cstat-no" title="statement not covered" >      var lastFrame = stack[stack.length-1];</span>
+<span class="cstat-no" title="statement not covered" >      var tag;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      if (lastFrame) {</span>
-<span class="cstat-no" title="statement not covered">        tag = lastFrame.tag;</span>
+<span class="cstat-no" title="statement not covered" >      if (lastFrame) {</span>
+<span class="cstat-no" title="statement not covered" >        tag = lastFrame.tag;</span>
         // If inner text was set by transform function then let's use it
-<span class="cstat-no" title="statement not covered">        text = lastFrame.innerText !== undefined ? lastFrame.innerText : text;</span>
+<span class="cstat-no" title="statement not covered" >        text = lastFrame.innerText !== undefined ? lastFrame.innerText : text;</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      if ((tag === 'script') || (tag === 'style')) {</span>
+<span class="cstat-no" title="statement not covered" >      if ((tag === 'script') || (tag === 'style')) {</span>
         // htmlparser2 gives us these as-is. Escaping them ruins the content. Allowing
         // script tags is, by definition, game over for XSS protection, so if that's
         // your concern, don't allow them. The same is essentially true for style tags
         // which have their own collection of XSS vectors.
-<span class="cstat-no" title="statement not covered">        result += text;</span>
+<span class="cstat-no" title="statement not covered" >        result += text;</span>
       } else {
-<span class="cstat-no" title="statement not covered">        var escaped = escapeHtml(text);</span>
-<span class="cstat-no" title="statement not covered">        if (options.textFilter) {</span>
-<span class="cstat-no" title="statement not covered">          result += options.textFilter(escaped);</span>
+<span class="cstat-no" title="statement not covered" >        var escaped = escapeHtml(text);</span>
+<span class="cstat-no" title="statement not covered" >        if (options.textFilter) {</span>
+<span class="cstat-no" title="statement not covered" >          result += options.textFilter(escaped);</span>
         } else {
-<span class="cstat-no" title="statement not covered">          result += escaped;</span>
+<span class="cstat-no" title="statement not covered" >          result += escaped;</span>
         }
       }
-<span class="cstat-no" title="statement not covered">      if (stack.length) {</span>
-<span class="cstat-no" title="statement not covered">           var frame = stack[stack.length - 1];</span>
-<span class="cstat-no" title="statement not covered">           frame.text += text;</span>
+<span class="cstat-no" title="statement not covered" >      if (stack.length) {</span>
+<span class="cstat-no" title="statement not covered" >           var frame = stack[stack.length - 1];</span>
+<span class="cstat-no" title="statement not covered" >           frame.text += text;</span>
       }
     },
-    onclosetag: <span class="fstat-no" title="function not covered">function(name) {</span>
+    onclosetag: <span class="fstat-no" title="function not covered" >function(name) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      if (skipText) {</span>
-<span class="cstat-no" title="statement not covered">        skipTextDepth--;</span>
-<span class="cstat-no" title="statement not covered">        if (!skipTextDepth) {</span>
-<span class="cstat-no" title="statement not covered">          skipText = false;</span>
+<span class="cstat-no" title="statement not covered" >      if (skipText) {</span>
+<span class="cstat-no" title="statement not covered" >        skipTextDepth--;</span>
+<span class="cstat-no" title="statement not covered" >        if (!skipTextDepth) {</span>
+<span class="cstat-no" title="statement not covered" >          skipText = false;</span>
         } else {
-<span class="cstat-no" title="statement not covered">          return;</span>
+<span class="cstat-no" title="statement not covered" >          return;</span>
         }
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      var frame = stack.pop();</span>
-<span class="cstat-no" title="statement not covered">      if (!frame) {</span>
+<span class="cstat-no" title="statement not covered" >      var frame = stack.pop();</span>
+<span class="cstat-no" title="statement not covered" >      if (!frame) {</span>
         // Do not crash on bad markup
-<span class="cstat-no" title="statement not covered">        return;</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
       }
-<span class="cstat-no" title="statement not covered">      skipText = false;</span>
-<span class="cstat-no" title="statement not covered">      depth--;</span>
-<span class="cstat-no" title="statement not covered">      if (skipMap[depth]) {</span>
-<span class="cstat-no" title="statement not covered">        delete skipMap[depth];</span>
-<span class="cstat-no" title="statement not covered">        frame.updateParentNodeText();</span>
-<span class="cstat-no" title="statement not covered">        return;</span>
-      }
-&nbsp;
-<span class="cstat-no" title="statement not covered">      if (transformMap[depth]) {</span>
-<span class="cstat-no" title="statement not covered">        name = transformMap[depth];</span>
-<span class="cstat-no" title="statement not covered">        delete transformMap[depth];</span>
+<span class="cstat-no" title="statement not covered" >      skipText = false;</span>
+<span class="cstat-no" title="statement not covered" >      depth--;</span>
+<span class="cstat-no" title="statement not covered" >      if (skipMap[depth]) {</span>
+<span class="cstat-no" title="statement not covered" >        delete skipMap[depth];</span>
+<span class="cstat-no" title="statement not covered" >        frame.updateParentNodeText();</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      if (options.exclusiveFilter &amp;&amp; options.exclusiveFilter(frame)) {</span>
-<span class="cstat-no" title="statement not covered">         result = result.substr(0, frame.tagPosition);</span>
-<span class="cstat-no" title="statement not covered">         return;</span>
+<span class="cstat-no" title="statement not covered" >      if (transformMap[depth]) {</span>
+<span class="cstat-no" title="statement not covered" >        name = transformMap[depth];</span>
+<span class="cstat-no" title="statement not covered" >        delete transformMap[depth];</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      frame.updateParentNodeText();</span>
+<span class="cstat-no" title="statement not covered" >      if (options.exclusiveFilter &amp;&amp; options.exclusiveFilter(frame)) {</span>
+<span class="cstat-no" title="statement not covered" >         result = result.substr(0, frame.tagPosition);</span>
+<span class="cstat-no" title="statement not covered" >         return;</span>
+      }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      if (options.selfClosing.indexOf(name) !== -1) {</span>
+<span class="cstat-no" title="statement not covered" >      frame.updateParentNodeText();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (options.selfClosing.indexOf(name) !== -1) {</span>
          // Already output /&gt;
-<span class="cstat-no" title="statement not covered">         return;</span>
+<span class="cstat-no" title="statement not covered" >         return;</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      result += "&lt;/" + name + "&gt;";</span>
+<span class="cstat-no" title="statement not covered" >      result += "&lt;/" + name + "&gt;";</span>
     }
   }, options.parser);
-<span class="cstat-no" title="statement not covered">  parser.write(html);</span>
-<span class="cstat-no" title="statement not covered">  parser.end();</span>
+<span class="cstat-no" title="statement not covered" >  parser.write(html);</span>
+<span class="cstat-no" title="statement not covered" >  parser.end();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return result;</span>
+<span class="cstat-no" title="statement not covered" >  return result;</span>
 &nbsp;
-<span class="fstat-no" title="function not covered">  function escapeHtml(s) {</span>
-<span class="cstat-no" title="statement not covered">    if (typeof(s) !== 'string') {</span>
-<span class="cstat-no" title="statement not covered">      s = s + '';</span>
+<span class="fstat-no" title="function not covered" >  function escapeHtml(s) {</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof(s) !== 'string') {</span>
+<span class="cstat-no" title="statement not covered" >      s = s + '';</span>
     }
-<span class="cstat-no" title="statement not covered">    return s.replace(/\&amp;/g, '&amp;amp;').replace(/&lt;/g, '&amp;lt;').replace(/\&gt;/g, '&amp;gt;').replace(/\"/g, '&amp;quot;');</span>
+<span class="cstat-no" title="statement not covered" >    return s.replace(/\&amp;/g, '&amp;amp;').replace(/&lt;/g, '&amp;lt;').replace(/\&gt;/g, '&amp;gt;').replace(/\"/g, '&amp;quot;');</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered">  function naughtyHref(name, href) {</span>
+<span class="fstat-no" title="function not covered" >  function naughtyHref(name, href) {</span>
     // Browsers ignore character codes of 32 (space) and below in a surprising
     // number of situations. Start reading here:
     // https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet#Embedded_tab
-<span class="cstat-no" title="statement not covered">    href = href.replace(/[\x00-\x20]+/g, '');</span>
+<span class="cstat-no" title="statement not covered" >    href = href.replace(/[\x00-\x20]+/g, '');</span>
     // Clobber any comments in URLs, which the browser might
     // interpret inside an XML data island, allowing
     // a javascript: URL to be snuck through
-<span class="cstat-no" title="statement not covered">    href = href.replace(/&lt;\!\-\-.*?\-\-\&gt;/g, '');</span>
+<span class="cstat-no" title="statement not covered" >    href = href.replace(/&lt;\!\-\-.*?\-\-\&gt;/g, '');</span>
     // Case insensitive so we don't get faked out by JAVASCRIPT #1
-<span class="cstat-no" title="statement not covered">    var matches = href.match(/^([a-zA-Z]+)\:/);</span>
-<span class="cstat-no" title="statement not covered">    if (!matches) {</span>
+<span class="cstat-no" title="statement not covered" >    var matches = href.match(/^([a-zA-Z]+)\:/);</span>
+<span class="cstat-no" title="statement not covered" >    if (!matches) {</span>
       // Protocol-relative URL: "//some.evil.com/nasty"
-<span class="cstat-no" title="statement not covered">      if (href.match(/^\/\//)) {</span>
-<span class="cstat-no" title="statement not covered">        return !options.allowProtocolRelative;</span>
+<span class="cstat-no" title="statement not covered" >      if (href.match(/^\/\//)) {</span>
+<span class="cstat-no" title="statement not covered" >        return !options.allowProtocolRelative;</span>
       }
 &nbsp;
       // No scheme
-<span class="cstat-no" title="statement not covered">      return false;</span>
+<span class="cstat-no" title="statement not covered" >      return false;</span>
     }
-<span class="cstat-no" title="statement not covered">    var scheme = matches[1].toLowerCase();</span>
+<span class="cstat-no" title="statement not covered" >    var scheme = matches[1].toLowerCase();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (has(options.allowedSchemesByTag, name)) {</span>
-<span class="cstat-no" title="statement not covered">      return options.allowedSchemesByTag[name].indexOf(scheme) === -1;</span>
+<span class="cstat-no" title="statement not covered" >    if (has(options.allowedSchemesByTag, name)) {</span>
+<span class="cstat-no" title="statement not covered" >      return options.allowedSchemesByTag[name].indexOf(scheme) === -1;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    return !options.allowedSchemes || options.allowedSchemes.indexOf(scheme) === -1;</span>
+<span class="cstat-no" title="statement not covered" >    return !options.allowedSchemes || options.allowedSchemes.indexOf(scheme) === -1;</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered">  function filterClasses(classes, allowed) {</span>
-<span class="cstat-no" title="statement not covered">    if (!allowed) {</span>
+<span class="fstat-no" title="function not covered" >  function filterClasses(classes, allowed) {</span>
+<span class="cstat-no" title="statement not covered" >    if (!allowed) {</span>
       // The class attribute is allowed without filtering on this tag
-<span class="cstat-no" title="statement not covered">      return classes;</span>
+<span class="cstat-no" title="statement not covered" >      return classes;</span>
     }
-<span class="cstat-no" title="statement not covered">    classes = classes.split(/\s+/);</span>
-<span class="cstat-no" title="statement not covered">    return classes.filter(<span class="fstat-no" title="function not covered">function(clss) {</span></span>
-<span class="cstat-no" title="statement not covered">      return allowed.indexOf(clss) !== -1;</span>
+<span class="cstat-no" title="statement not covered" >    classes = classes.split(/\s+/);</span>
+<span class="cstat-no" title="statement not covered" >    return classes.filter(<span class="fstat-no" title="function not covered" >function(clss) {</span></span>
+<span class="cstat-no" title="statement not covered" >      return allowed.indexOf(clss) !== -1;</span>
     }).join(' ');
   }
 }
@@ -1307,21 +1309,21 @@ sanitizeHtml.defaults = {
   allowProtocolRelative: true
 };
 &nbsp;
-sanitizeHtml.simpleTransform = <span class="fstat-no" title="function not covered">function(newTagName, newAttribs, merge) {</span>
-<span class="cstat-no" title="statement not covered">  merge = (merge === undefined) ? true : merge;</span>
-<span class="cstat-no" title="statement not covered">  newAttribs = newAttribs || {};</span>
+sanitizeHtml.simpleTransform = <span class="fstat-no" title="function not covered" >function(newTagName, newAttribs, merge) {</span>
+<span class="cstat-no" title="statement not covered" >  merge = (merge === undefined) ? true : merge;</span>
+<span class="cstat-no" title="statement not covered" >  newAttribs = newAttribs || {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return <span class="fstat-no" title="function not covered">function(tagName, attribs) {</span></span>
-<span class="cstat-no" title="statement not covered">    var attrib;</span>
-<span class="cstat-no" title="statement not covered">    if (merge) {</span>
-<span class="cstat-no" title="statement not covered">      for (attrib in newAttribs) {</span>
-<span class="cstat-no" title="statement not covered">        attribs[attrib] = newAttribs[attrib];</span>
+<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >function(tagName, attribs) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var attrib;</span>
+<span class="cstat-no" title="statement not covered" >    if (merge) {</span>
+<span class="cstat-no" title="statement not covered" >      for (attrib in newAttribs) {</span>
+<span class="cstat-no" title="statement not covered" >        attribs[attrib] = newAttribs[attrib];</span>
       }
     } else {
-<span class="cstat-no" title="statement not covered">      attribs = newAttribs;</span>
+<span class="cstat-no" title="statement not covered" >      attribs = newAttribs;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    return {</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
       tagName: newTagName,
       attribs: attribs
     };
@@ -1329,11 +1331,10 @@ sanitizeHtml.simpleTransform = <span class="fstat-no" title="function not covere
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 11:52:35 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 19:13:08 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
