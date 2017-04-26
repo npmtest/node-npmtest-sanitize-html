@@ -1,6 +1,6 @@
 # npmtest-sanitize-html
 
-#### test coverage for  [sanitize-html (v1.14.1)](https://github.com/punkave/sanitize-html#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-sanitize-html.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-sanitize-html) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-sanitize-html.svg)](https://travis-ci.org/npmtest/node-npmtest-sanitize-html)
+#### basic test coverage for  [sanitize-html (v1.14.1)](https://github.com/punkave/sanitize-html#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-sanitize-html.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-sanitize-html) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-sanitize-html.svg)](https://travis-ci.org/npmtest/node-npmtest-sanitize-html)
 
 #### Clean up user-submitted HTML, preserving whitelisted elements and whitelisted attributes on a per-element basis
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-sanitize-html/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-sanitize-html/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-sanitize-html/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-sanitize-html/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-sanitize-html/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-sanitize-html/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-sanitize-html/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-sanitize-html/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-sanitize-html/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-sanitize-html/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-sanitize-html/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-sanitize-html/build/coverage.html/index.html)
 
@@ -110,7 +110,8 @@
         "prebuild": "npm run test && rm -rf dist && mkdir dist",
         "test": "mocha test/test.js"
     },
-    "version": "1.14.1"
+    "version": "1.14.1",
+    "bin": {}
 }
 ```
 
